@@ -11,8 +11,11 @@ include 'conexion.php';
         if(isset($_POST['enviar'])){
             // código que se ejecuta cuando presiona el botón Actualizar
             $id=$_POST['id'];
+            $placa = $_POST['placa'];
             $marca = $_POST['marca'];
+            $modelo = $_POST['modelo'];
             $anio = $_POST['anio'];
+            $color = $_POST['color'];
             // actualización
             $sql="update vehiculos set marca='".$marca."', anio='".$anio."' WHERE ID='".$id."'";
             $resultado=mysqli_query($conexion,$sql);
@@ -28,17 +31,26 @@ include 'conexion.php';
             $sql="SELECT * FROM vehiculos WHERE ID='".$id."'";
             $resultado=mysqli_query($conexion,$sql);
             $fila=mysqli_fetch_assoc($resultado);
+            $placa=$fila["placa"] ?? null;
             $marca=$fila["marca"] ?? null;
+            $modelo=$fila["modelo"] ?? null;
             $anio=$fila["anio"] ?? null;
+            $color=$fila["color"] ?? null;
 
             mysqli_close($conexion);
         ?>
         <h1>Modificar datos vehículo</h1>
         <form action="<?=$_SERVER['PHP_SELF']?>" method = "post">
+            <label>Placa:</label>
+            <input type="text" name="placa" value="<?=$placa?>" readonly><br/>
             <label>Marca:</label>
             <input type="text" name="marca" value="<?php echo $marca; ?>"><br><br>
+            <label>Modelo:</label>
+            <input type="text" name="modelo" value="<?php echo $modelo; ?>"><br><br>
             <label>Año:</label>
             <input type="number" name="anio" min="0" maxlength="4" value="<?php echo $anio; ?>"><br><br>
+            <label>Color:</label>
+            <input type="text" name="color" value="<?php echo $color; ?>"><br><br>
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="submit" name="enviar" value="Actualizar">
             <a href="index.php">Regresar</a>

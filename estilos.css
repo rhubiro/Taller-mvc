@@ -37,7 +37,7 @@ table {
   }
   
   input[type=text], select {
-    width: 100%;
+    width: 10%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -48,7 +48,7 @@ table {
   
   
   input[type=submit] {
-    width: 100%;
+    width: 10%;
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;

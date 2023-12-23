@@ -10,8 +10,7 @@
             if(!$conexion){
                 die("no se conectó a la base de datos".mysqli_error());
             }
-            echo "conexión perfecta";
-            //mysqli_close($conexion);
+            echo "Conexión establecida";
             ?>
         </body>
     </head>
