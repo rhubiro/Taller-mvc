@@ -1,6 +1,12 @@
 <html>
     <head>
         <title>Listado de autos</title>
+        <script type="text/javascript">
+            function confirmar() {
+                return confirm('!Aviso! Si pulsas en OK, no podrás recuperar el registro');
+            }
+        </script>
+        <link rel="stylesheet" type="text/css" href="estilos.css">
     </head>
     <body>
         <?php
@@ -31,7 +37,7 @@
                     <td>
                         <?php echo "<a href = 'modificar.php?id=".$filas['id']."'>Modificar</a>"; ?>
                         -
-                        <?php echo "<a href=''>Eliminar</a>"; ?>
+                        <?php echo "<a href = 'eliminar.php?id=".$filas['id']."' onclick='return confirmar()'>Eliminar</a>"; ?>
                     </td>
                 </tr>
                 <?php

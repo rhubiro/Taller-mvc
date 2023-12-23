@@ -4,6 +4,7 @@ include 'conexion.php';
 <html>
     <head>
         <title>Modificar</title>
+        <link rel="stylesheet" type="text/css" href="estilos.css">
     </head>
     <body>
         <?php
@@ -16,7 +17,7 @@ include 'conexion.php';
             $sql="update vehiculos set marca='".$marca."', anio='".$anio."' WHERE ID='".$id."'";
             $resultado=mysqli_query($conexion,$sql);
             If($resultado){
-                echo "<script language='JavaScript'>alert('Vehiculo Modificado Correctamente'); location.assign('index.php'); </script>";
+                echo "<script language='JavaScript'>alert('Vehículo modificado correctamente'); location.assign('index.php'); </script>";
             }else {
                 echo "<script language='JavaScript'>alert('Error al intentar actualizar los datos'); location.assign('index.php'); </script>";
             }

@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Agregar</title>
+        <link rel="stylesheet" type="text/css" href="estilos.css">
     </head>
     <body>
         <?php
