@@ -42,15 +42,15 @@ include 'conexion.php';
         <h1>Modificar datos vehículo</h1>
         <form action="<?=$_SERVER['PHP_SELF']?>" method = "post">
             <label>Placa:</label>
-            <input type="text" name="placa" value="<?=$placa?>" readonly><br/>
+            <input type="text" name="placa" value="<?php echo $placa; ?>"><br/>
             <label>Marca:</label>
-            <input type="text" name="marca" value="<?php echo $marca; ?>"><br><br>
+            <input type="text" name="marca" value="<?php echo $marca; ?>">
             <label>Modelo:</label>
-            <input type="text" name="modelo" value="<?php echo $modelo; ?>"><br><br>
+            <input type="text" name="modelo" value="<?php echo $modelo; ?>">
             <label>Año:</label>
-            <input type="number" name="anio" min="0" maxlength="4" value="<?php echo $anio; ?>"><br><br>
+            <input type="number" name="anio" min="0" maxlength="4" value="<?php echo $anio; ?>">
             <label>Color:</label>
-            <input type="text" name="color" value="<?php echo $color; ?>"><br><br>
+            <input type="text" name="color" value="<?php echo $color; ?>">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="submit" name="enviar" value="Actualizar">
             <a href="index.php">Regresar</a>

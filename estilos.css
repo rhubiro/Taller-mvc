@@ -5,9 +5,9 @@ table {
   
   th,td {
     text-align: center;
-    padding: 8px;
+    padding: 4px;
   }
-  
+ 
   tr:nth-child(even){
     background-color: #f2f2f2
   }
@@ -20,7 +20,7 @@ table {
   a:link, a:visited {
     background-color: blue;
     color: white;
-    padding: 14px 25px;
+    padding: 7px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -32,13 +32,22 @@ table {
     border-radius: 5px;
   }
   
+  a:nth-child(1){
+    background-color: orange;
+  }
+
+  
+  a:nth-child(2){
+    background-color: crimson
+  }
+  
   h1,h2,h3,h4 {
     text-align: center;
   }
   
   input[type=text], select {
-    width: 10%;
-    padding: 12px 20px;
+    width: 100px;
+    padding: 7px 10px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -48,16 +57,17 @@ table {
   
   
   input[type=submit] {
-    width: 10%;
+    width: 100px;
     background-color: #4CAF50;
     color: white;
-    padding: 14px 20px;
+    padding: 7px 10px;
     margin: 8px 0;
+    display: inline-block;
     border: none;
     border-radius: 4px;
     cursor: pointer;
   }
   
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #ccc;
   }

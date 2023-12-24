@@ -28,15 +28,15 @@
         <h1>Agregar nuevo vehículo</h1>
         <form action = "<?=$_SERVER['PHP_SELF']?>" method = "post">
             <label>Placa:</label>
-            <input type = "text" name = "placa"><br><br>
+            <input type = "text" name = "placa"><br>
             <label>Marca:</label>
-            <input type = "text" name = "marca"><br><br>
+            <input type = "text" name = "marca">
             <label>Modelo:</label>
-            <input type = "text" name = "modelo"><br><br>
+            <input type = "text" name = "modelo">
             <label>Año:</label>
-            <input type = "text" name = "anio"><br><br>
+            <input type = "text" name = "anio">
             <label>Color:</label>
-            <input type = "text" name = "color"><br><br>
+            <input type = "text" name = "color">
             <input type = "submit" name = "enviar" value = "Agregar">
             <a href = "index.php">Regresar</a>
         </form>

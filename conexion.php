@@ -8,7 +8,7 @@
             <?php
             $conexion = mysqli_connect("localhost","root","RDGGmy\$q1","bd_mvc");
             if(!$conexion){
-                die("no se conectó a la base de datos".mysqli_error());
+                die("No se conectó a la base de datos".mysqli_error());
             }
             echo "Conexión establecida";
             ?>
