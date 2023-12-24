@@ -11,7 +11,7 @@
     <body>
         <?php
         // Conexión a la base de datos db_mvc
-        include("conexion.php");
+        include 'conexion.php';
         $consulta = "SELECT * FROM vehiculos";
         $resultado = mysqli_query($conexion, $consulta);
         ?>

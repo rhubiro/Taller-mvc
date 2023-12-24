@@ -5,7 +5,7 @@
     </head>
     <body>
         <?php
-        if(isset($_POST['enviar'])){
+        if(isset($_POST['enviar']) and $_POST['placa'] and $anio = $_POST['anio']){
             $placa = $_POST['placa'];
             $marca = $_POST['marca'];
             $modelo = $_POST['modelo'];
@@ -18,9 +18,9 @@
             $resultado = mysqli_query($conexion, $sql);
 
             if($resultado){
-                echo "<script language = 'JavaScript'> alert('Vehículo agregado correctamente'); location.assingn('index.php'); </script>";
+                echo "<script language = 'JavaScript'> alert('Vehículo agregado correctamente'); location.assign('index.php'); </script>";
             }else {
-                echo "<script language = 'JavaScript'> alert('Error al agregar el registro'); location.assingn('index.php'); </script>";
+                echo "<script language = 'JavaScript'> alert('Error al agregar el registro'); location.assign('index.php'); </script>";
             }
             mysqli_close($conexion);
         }else {
