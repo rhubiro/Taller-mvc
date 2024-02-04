@@ -6,11 +6,11 @@
         </head>
         <body>
             <?php
-            $conexion = mysqli_connect("localhost","root","RDGGmy\$q1","bd_mvc");
+            $conexion = mysqli_connect("localhost:3307","root","","bd_mvc");
             if(!$conexion){
                 die("No se conectó a la base de datos".mysqli_error());
             }
-            echo "Conexión establecida";
+            echo "Conexión establecida"."<br><br>"."Current PHP version: ". phpversion();
             ?>
         </body>
     </head>

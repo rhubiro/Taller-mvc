@@ -17,7 +17,7 @@ include 'conexion.php';
             $anio = $_POST['anio'];
             $color = $_POST['color'];
             // actualización
-            $sql="update vehiculos set marca='".$marca."', anio='".$anio."' WHERE ID='".$id."'";
+            $sql="update vehiculos set placa='".$placa."', marca='".$marca."', modelo='".$modelo."', anio='".$anio."', color='".$color."' WHERE ID='".$id."'";
             $resultado=mysqli_query($conexion,$sql);
             If($resultado){
                 echo "<script language='JavaScript'>alert('Vehículo modificado correctamente'); location.assign('index.php'); </script>";
